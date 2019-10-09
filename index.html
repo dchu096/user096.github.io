@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+  /**
+    * Disable right-click of mouse, F12 key, and save key combinations on page
+    * By Arthur Gareginyan (arthurgareginyan@gmail.com)
+    * For full source code, visit https://mycyberuniverse.com
+    */
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>  
+<title>Home | User096</title>
+<link rel="icon" href="https://avatars1.githubusercontent.com/u/39256422?s=180&v=4">
+</head>
+<h1>Welcome to user096.github.io - A webpage made by user096</h1>
+<hr>
+<p><b>From Author</b><br>
+Hi i am daniel chu. The creator of user096.github.io. I am a mini HTML ceator and like combining different things into 1. Hope you enjoy on my webpage.</p>
+<p>to start using my webpage, click to the <a href="http://user096.rf.gd/contents.html">Contents</a>.
+you may find this is same as my other web. and it is</p>
+<hr>
+My discord server:<a href="https://discord.gg/W6pNcPn">https://discord.gg/W6pNcPn</a><br>
+My youtube:<a href="https://www.youtube.com/channel/UCdsd_bifVCTwyb5TMeMxe3Q">https://www.youtube.com/channel/UCdsd_bifVCTwyb5TMeMxe3Q</a>
